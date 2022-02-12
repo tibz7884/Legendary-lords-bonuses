@@ -31,7 +31,7 @@ var_dump($race_selected);
         $connect->close();         
             while ($ll_bonus = mysqli_fetch_array($resultat_bonuses)){
                 //var_dump($ll_bonus);
-                //echo 'Bonus 1 = '.$ll_bonus[bonus1].' '.'Bonus 2 = '.$ll_bonus[bonus2].' '.'Bonus 3 ='.$ll_bonus[bonus3] ;
+                echo 'Bonus 1 = '.$ll_bonus[bonus1].' '.'Bonus 2 = '.$ll_bonus[bonus2].' '.'Bonus 3 ='.$ll_bonus[bonus3] ;
         }
        
     }else
