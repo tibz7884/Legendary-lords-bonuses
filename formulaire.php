@@ -25,8 +25,8 @@
             <h1>Which bonus for which legendary lord in TOTAL WAR WARHAMMER</h1>
                 <div class="formulaire">             
                     <form action="search.php" method="post">
-                        <div id="label_option">
-                            <label for="legendary_lord">Choose a legendary lord or a race : </label>
+                        <div id="label_option_race">
+                            <label for="legendary_lord">Choose a legendary a race : </label>
                             <select onchange="selectRace();" name="race" id="race">
                                 <option disabled selected value> -- choose a race -- </option>
                                     <?php 
@@ -42,7 +42,8 @@
                                         </script>
                         </div>
                         </select>
-                        <div id="label_option">
+                        <div id="label_option_ll">
+                        <label for="legendary_lord">Choose a legendary a legendary lord : </label>
                             <select class="legendary_lord" id="legendary_lord" name="legendary_lord_selection">
                                 <option disabled selected value> -- select a legendary lord -- </option>
                                     <?php
@@ -65,7 +66,9 @@
                                     ?>
                             </select>
                         </div>
-                        <input type="submit" value="confirm">
+                        <div id="container_button">
+                            <input type="submit" value="confirm" id="button">
+                        </div>
                     </form>
                 <p id="raceDisplay"></p>
             </div>

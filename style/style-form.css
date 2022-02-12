@@ -14,6 +14,25 @@
 
 .formulaire{
     margin-top: 50px;
+    padding: auto;
+    align-items: center;
+}
+
+#label_option_ll{
+    padding-top: 30px;
+
+}
+
+#button{
+    margin-top: 30px;
+    width: 5em;
+    height: auto;
+    text-align: center;
+}
+
+#container_button{
+   text-align: center;
+  
 
 }
 
