@@ -1,0 +1,82 @@
+[
+  {
+    "legendary_lord": "Tyrion",
+    "race": "hauts_elfes"
+  },
+  {
+    "legendary_lord": "Teclis",
+    "race": "hauts_elfes"
+  },
+  {
+    "legendary_lord": "Alarielle",
+    "race": "hauts_elfes"
+  },
+  {
+    "legendary_lord": "Alith_Anar",
+    "race": "hauts_elfes"
+  },
+  {
+    "legendary_lord": "Eltharion",
+    "race": "hauts_elfes"
+  },
+  {
+    "legendary_lord": "Imrik",
+    "race": "hauts_elfes"
+  },
+  {
+    "legendary_lord": "Mazdamundi",
+    "race": "hommes_lezards"
+  },
+  {
+    "legendary_lord": "Kroq_Gar",
+    "race": "hommes_lezards"
+  },
+  {
+    "legendary_lord": "Tehenhauin",
+    "race": "hommes_lezards"
+  },
+  {
+    "legendary_lord": "Tiktaq_to",
+    "race": "hommes_lezards"
+  },
+  {
+    "legendary_lord": "Nakai",
+    "race": "hommes_lezards"
+  },
+  {
+    "legendary_lord": "Gor Rok",
+    "race": "hommes_lezards"
+  },
+  {
+    "legendary_lord": "Malekith",
+    "race": "elfes_noirs"
+  },
+  {
+    "legendary_lord": "Morathi",
+    "race": "elfes_noirs"
+  },
+  {
+    "legendary_lord": "Hellebron",
+    "race": "elfes_noirs"
+  },
+  {
+    "legendary_lord": "Lokhir",
+    "race": "elfes_noirs"
+  },
+  {
+    "legendary_lord": "Malus",
+    "race": "elfes_noirs"
+  },
+  {
+    "legendary_lord": "Queek",
+    "race": "skaven"
+  },
+  {
+    "legendary_lord": "Skrolk",
+    "race": "skaven"
+  },
+  {
+    "legendary_lord": "Tretch",
+    "race": "skaven"
+  }
+]
