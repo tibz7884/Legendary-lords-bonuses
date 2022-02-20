@@ -41,29 +41,29 @@
                                         }
                                         </script>
                         </div>
-                        </select>
-                        <div id="label_option_ll">
-                        <label for="legendary_lord">Choose a legendary a legendary lord : </label>
-                            <select class="legendary_lord" id="legendary_lord" name="legendary_lord_selection">
-                                <option disabled selected value> -- select a legendary lord -- </option>
-                                    <?php
-                                
-                                        /*if (isset($race_selected) && $race_selected != 'value'){
-                                        $connect = new mysqli("localhost", "root", "root", "LegendaryLordsBonus");
-                                        $req_race_ll = "SELECT legendary_lord from race inner join legendarylords on race.id = legendarylords.race_id where race = $race";
-                                        $resultat_race_ll= $connect->query($req_race_ll);
-                                        $connect->close();
-                                            while ($race_ll = mysqli_fetch_array($resultat_race_ll)) {
-                                                echo '<option value="'.$race_ll['legendary_lord'].'">'.$race_ll['legendary_lord'].'</option>';
+                            </select>
+                            <div id="label_option_ll">
+                                <label for="legendary_lord">Choose a legendary a legendary lord : </label>
+                                    <select class="legendary_lord" id="legendary_lord" name="legendary_lord_selection">
+                                        <option disabled selected value> -- select a legendary lord -- </option>
+                                            <?php
+                                        
+                                                /*if (isset($race_selected) && $race_selected != 'value'){
+                                                $connect = new mysqli("localhost", "root", "root", "LegendaryLordsBonus");
+                                                $req_race_ll = "SELECT legendary_lord from race inner join legendarylords on race.id = legendarylords.race_id where race = $race";
+                                                $resultat_race_ll= $connect->query($req_race_ll);
+                                                $connect->close();
+                                                    while ($race_ll = mysqli_fetch_array($resultat_race_ll)) {
+                                                        echo '<option value="'.$race_ll['legendary_lord'].'">'.$race_ll['legendary_lord'].'</option>';
 
+                                                        }
                                                 }
-                                        }
-                                        else{*/
-                                        while ($ll = mysqli_fetch_array($resultat_ll)) {
-                                            echo '<option value="'.$ll['legendary_lord'].'">'.$ll['legendary_lord'].'</option>';
-                                        }
-                                    
-                                    ?>
+                                                else{*/
+                                                while ($ll = mysqli_fetch_array($resultat_ll)) {
+                                                    echo '<option value="'.$ll['legendary_lord'].'">'.$ll['legendary_lord'].'</option>';
+                                                }
+                                            
+                                            ?>
                             </select>
                         </div>
                         <div id="container_button">

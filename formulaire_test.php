@@ -15,6 +15,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./essai.js"></script>
+    <script src="./race_ll.json"></script>
     <title>Legendary lord selection</title>
 </head>
 <body>
@@ -36,20 +38,11 @@
                     <label for="legendary_lord">Choose a legendary lord or a race : </label>
                     <select onchange="selectRace();" name="race" id="race">
                     <option disabled selected value> -- choose a race -- </option>
-                            <?php 
-                            while ($race = mysqli_fetch_array($resultat_race)) {
-                                echo '<option value="'.$race['race'].'">'.$race['race'].'</option>';
-                            }
-                            ?>
-                            <script>
-                                
-                                //Function to display the selection of the race in real time
-                                function selectRace(){
-                                var race = document.getElementById("race").value;
-                                document.getElementById("raceDisplay").innerHTML="You selected "+race; 
-                                }
-                            </script>
-                            
+                    <?php 
+                        while ($race = mysqli_fetch_array($resultat_race)) {
+                            echo '<option value="'.$race['race'].'">'.$race['race'].'</option>';
+                        }
+                    ?>          
                     </select>
                     <select class="form-control" id="form-control" name="legendary_lord_selection">
                             <option disabled selected value> -- select a legendary lord -- </option>
@@ -60,18 +53,20 @@
                                     echo '<option value="'.$ll['legendary_lord'].'">'.$ll['legendary_lord'].'</option>';
                                 }
                                
-                            ?>
-                            
-                            
-                                
-                            
-                                                  
+                            ?>                                                  
                     </select>
              
                     <input type="submit" value="valider">
                 </form>
                 <p id="raceDisplay"></p>
-                <p> <?php var_dump($llLord_Race); ?> </p> 
+                <p id="dbDisplay"></p>
+                <script>
+                    
+                    const jsonFile = JSON.stringify("./race_ll.json");
+                    const jsonDisplay = document.querySelector("#dbDisplay")
+                    jsonDisplay.innerHTML=jsonFile
+                </script>
+                <p> <?php //var_dump($llLord_Race); ?> </p> 
             </div>
                
     </div>
