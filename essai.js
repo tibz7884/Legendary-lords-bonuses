@@ -1,6 +1,5 @@
-//Function to display the selection of the race in real time
 
-
+//Function test, bring data from the race selection and write it
 function selectRace(){
     var race = document.getElementById("race").value;
     console.log(race);
@@ -8,24 +7,30 @@ function selectRace(){
     };
 
 //Function which get data from JSON file and dispay the result in an option menu
-function displayLegendaryLord(){
+function displayLegendaryLord(jsonFile){
+    
     var race = document.getElementById("race").value;
-    fetch('./race_ll.json')
+    fetch(jsonFile)
     .then(results => results.json())
     .then((data) => {
         console.log(race)
-        line = "";
         var ll_Selection = document.getElementById("form-control")
-        for (var i = 0; i<data.length; i++){  
-            if (data[i].race == race){
-                var opt = document.createElement('option');
-                opt.value=i;
-                opt.text = data[i].legendary_lord;
+        
+        for (var i = 0; i<data.length; i++){ 
+            var opt = document.createElement('option'); 
+
+         
+            if (data[i].race === race){  
+                ll_Selection.removeAttribute(data[i].legendary_lord)   
+                //ll_Selection.remove(opt.value[i]);  
+                opt.value= data[i].legendary_lord;
+                opt.text = data[i].legendary_lord;    
                 ll_Selection.appendChild(opt);
-                
+               
             }
-        }
-        //document.querySelector("#dbDisplay").innerHTML=data[19];
+            
+        }   
+   
     }); 
     }
 

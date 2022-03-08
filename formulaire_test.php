@@ -34,9 +34,9 @@
         <h1>Which bonus for which legendary lord in TOTAL WAR WARHAMMER II</h1>
             <div class="formulaire">
                 
-                <form action="formulaire_test.php" method="post">
+                <form action="search.php" method="post">
                     <label for="legendary_lord">Choose a legendary lord or a race : </label>
-                    <select onchange="displayLegendaryLord()" name="race" id="race">
+                    <select onchange="displayLegendaryLord('./race_ll.json')" name="race" id="race">
                     <option disabled selected value> -- choose a race -- </option>
                     <?php 
                         while ($race = mysqli_fetch_array($resultat_race)) {
@@ -46,45 +46,28 @@
                     </select>
                     <select class="form-control" id="form-control" name="legendary_lord_selection">
                             <option disabled selected value id="ll_Selection"> -- select a legendary lord -- </option>
-                            <?php
-                      
-                                //Display all legendary lords
-                                //while ($ll = mysqli_fetch_array($resultat_ll)) {
-                                  //  echo '<option value="'.$ll['legendary_lord'].'">'.$ll['legendary_lord'].'</option>';
-                                //}
-                               
-                            ?>                                                  
+                           <script> 
+                                fetch('./race_ll.json')
+                                    .then(results => results.json())
+                                    .then((dataMain) => {
+                                        var ll_Selection = document.getElementById("form-control");           
+                                        for (var i = 0; i<dataMain.length; i++){ 
+                                            var opt = document.createElement('option');   
+                                            //ll_Selection.remove(opt.value[i]);  
+                                            opt.value= dataMain[i].legendary_lord;
+                                            opt.text = dataMain[i].legendary_lord;    
+                                            ll_Selection.appendChild(opt);
+                                        }
+                                    });
+                            </script>
+                                                                      
                     </select>
              
                     <input type="submit" value="valider">
                 </form>
                 <p id="raceDisplay"></p>
                 <p id="dbDisplay"></p>
-                <script>
-                    
-                 /*    fetch('./race_ll.json')
-                    .then(results => results.json())
-                    .then((data) => {
-                        //console.log(data[19])
-                        var userRaceSelection = document.getElementById("race");
-                        console.log(userRaceSelection);
-                        
-                        var fullData = document.getElementById("dbDisplay")
-                        for (var i = 0; i<data.length; i++){  
-                            if (data[i].race == userRaceSelection){
-                                var div = document.createElement("div")
-                                div.innerHTML = ' Name :' + data[i].legendary_lord;
-                                fullData.appendChild(div);
-                            }
-                        }
-                        //document.querySelector("#dbDisplay").innerHTML=data[19];
-                    }); */
-                    
-
-   /*                  const jsonFile = JSON.stringify('./race_ll.json');
-                    const jsonDisplay = document.querySelector("#dbDisplay")
-                    jsonDisplay.innerHTML=jsonFile */
-                </script>
+         
                 <p> <?php //var_dump($llLord_Race); ?> </p> 
             </div>
                

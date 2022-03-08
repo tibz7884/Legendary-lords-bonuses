@@ -8,15 +8,16 @@
 </head>
 <body>
     
-
+<a href="formulaire.php">Retour au formulaire</a>
 
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Legendary Lord Name</th>
+      <th scope="col">Bonus 1</th>
+      <th scope="col">Bonus 2</th>
+      <th scope="col">Bonus 3</th>
     </tr>
   </thead>
   <tbody>
