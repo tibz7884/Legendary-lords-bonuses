@@ -18,9 +18,7 @@ function displayLegendaryLord(jsonFile){
 
         for (var i = 0; i<data.length+1;i++){
             ll_Selection.remove('option'); 
-        }
-        
-       
+        }    
         for (var i = 0; i<data.length; i++){ 
             var opt = document.createElement('option'); 
 

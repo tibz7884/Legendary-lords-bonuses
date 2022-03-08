@@ -39,7 +39,7 @@
                         </div>
                             </select>
                         <div id="label_option_ll">
-                            <label for="legendary_lord">Choose a legendary a legendary lord : </label>
+                            <label for="legendary_lord">Choose a legendary lord : </label>
                                 <select class="legendary_lord" id="legendary_lord" name="legendary_lord_selection">
                                     <option disabled selected value> -- select a legendary lord -- </option>
                                         <script> 
