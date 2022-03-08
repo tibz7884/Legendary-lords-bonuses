@@ -52,8 +52,7 @@
                                     .then((dataMain) => {
                                         var ll_Selection = document.getElementById("form-control");           
                                         for (var i = 0; i<dataMain.length; i++){ 
-                                            var opt = document.createElement('option');   
-                                            //ll_Selection.remove(opt.value[i]);  
+                                            var opt = document.createElement('option');     
                                             opt.value= dataMain[i].legendary_lord;
                                             opt.text = dataMain[i].legendary_lord;    
                                             ll_Selection.appendChild(opt);
