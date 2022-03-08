@@ -28,7 +28,7 @@
                 <div class="formulaire">             
                     <form action="search.php" method="post">
                         <div id="label_option_race">
-                            <label for="legendary_lord">Choose a legendary a race : </label>
+                            <label for="legendary_lord">Choose a race : </label>
                             <select onchange="displayLegendaryLord('./race_ll.json')" name="race" id="race">
                                 <option disabled selected value> -- choose a race -- </option>
                                     <?php 
