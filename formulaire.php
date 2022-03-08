@@ -47,7 +47,9 @@
                                         </script>
                                 </select>
                         </div>
+                        <div id="button_container">
                             <input type="submit" value="confirm" id="button">
+                        </div>
                         
                     </form>
                 <p id="raceDisplay"></p>
