@@ -15,8 +15,6 @@ $race_selected = $_POST["race"];
 
     if (isset($ll_selected) && $ll_selected != " -- select a legendary lord -- "){
 
-        echo 'Vous avec selectionné : '.$ll_selected."\n";
-
         $req_bonuses="SELECT bonus1, bonus2, bonus3 from legendaryLords where legendary_lord = '$ll_selected'";
         $resultat_bonuses=$connect->query($req_bonuses);
         $connect->close();         
