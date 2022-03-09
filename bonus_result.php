@@ -37,7 +37,8 @@ $race_selected = $_POST["race"];
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <link rel="stylesheet" href="./style/style-bonus_result.css">
+            <title>Bonus Results</title>
         </head>
         <body>
             

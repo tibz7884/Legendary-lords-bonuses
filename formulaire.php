@@ -26,7 +26,7 @@
        
             <h1>Which bonus for which legendary lord in TOTAL WAR WARHAMMER</h1>
                 <div class="formulaire">             
-                    <form action="search.php" method="post">
+                    <form action="bonus_result.php" method="post">
                         <div id="label_option_race">
                             <label for="legendary_lord">Choose a race : </label>
                             <select onchange="displayLegendaryLord('./race_ll.json')" name="race" id="race">
