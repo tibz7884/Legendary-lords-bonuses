@@ -16,9 +16,8 @@ function displayLegendaryLord(jsonFile){
         console.log(race)
         var ll_Selection = document.getElementById("legendary_lord");
 
-        for (var i = 0; i<data.length+1;i++){
-            ll_Selection.remove('option'); 
-        }    
+        ll_Selection.remove('option'); 
+          
         for (var i = 0; i<data.length; i++){ 
             var opt = document.createElement('option'); 
 
