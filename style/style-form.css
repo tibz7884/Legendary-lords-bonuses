@@ -2,7 +2,12 @@
     background-color: black;
     margin: 0px;
     padding: 0px;
-    color: white;
+    color: rgb(187, 184, 184);
+}
+
+h1{
+    text-decoration: underline;
+    
 }
 
 .container{

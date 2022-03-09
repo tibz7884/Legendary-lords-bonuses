@@ -2,12 +2,13 @@
     background-color: black;
     margin: 0px;
     padding: 0px;
-    color: white;
+    color: rgb(187, 184, 184);
 }
 
 h1{
     text-align: center;
     margin-top: 30px;
+    text-decoration: underline;
 }
 
 
@@ -15,6 +16,7 @@ h1{
     width: 100%;
     text-align: center;
     font-size: 25px;
+    
     margin-top: 30px;
   
 
@@ -25,11 +27,16 @@ h1{
 }
 th, td{
     border: 1px solid;
-    border-color: white;
+    border-color: rgb(163, 161, 161);
+    
 
 }
 #no-selection{
     text-align: center;
     font-size: x-large;
     color: red;
+}
+
+td:hover{
+    background-color:darkslategray;
 }

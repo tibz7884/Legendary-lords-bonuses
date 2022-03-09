@@ -11,7 +11,7 @@
         </head>
         <body>
             
-        <a href="formulaire.php">Retour au formulaire</a>
+        <a href="formulaire.php">Back to form</a>
         <?php
 
           $pageTitle = "search | Legendary_lords_bonus";
@@ -41,7 +41,7 @@
                   }
                 
               }else
-                  echo '<p id="no-selection">'.'Pas de legendary lord selectionné !!!!'."\n".'<p>';  
+                  echo '<p id="no-selection">'.'No legendary lord selected !!!!'."\n".'<p>';  
 
         ?>
 

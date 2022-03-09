@@ -1,4 +1,4 @@
-<a href="formulaire.php">Retour au formulaire</a>
+<a href="formulaire.php">Back to form</a>
 
 <form action="ll_creation.php" method="get" name="new_lord" id="new_lord">
     <label for="new_lord" >Legendary lord : </label>
