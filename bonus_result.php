@@ -1,35 +1,4 @@
-<?php
 
-$pageTitle = "search | Legendary_lords_bonus";
-session_start();
-
-define('DB_HOST', "localhost");
-define('DB_NAME', "root");
-define('DB_PASSWORD', "root");
-define('DB_DATABASE',"LegendaryLordsBonus");
-
-$connect = new mysqli(DB_HOST, DB_NAME, DB_PASSWORD, DB_DATABASE);
-
-$ll_selected = $_POST["legendary_lord_selection"];
-$race_selected = $_POST["race"];
-
-    if (isset($ll_selected) && $ll_selected != " -- select a legendary lord -- "){
-
-        $req_bonuses="SELECT bonus1, bonus2, bonus3 from legendaryLords where legendary_lord = '$ll_selected'";
-        $resultat_bonuses=$connect->query($req_bonuses);
-        $connect->close();         
-            while ($ll_bonus = mysqli_fetch_array($resultat_bonuses)){
-               
-                $bonus1=$ll_bonus[bonus1];
-                $bonus2=$ll_bonus[bonus2];
-                $bonus3=$ll_bonus[bonus3];
- 
-        }
-       
-    }else
-        echo 'pas de legendary lord entré!!!!'."\n";
-
-        ?>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -43,6 +12,38 @@ $race_selected = $_POST["race"];
         <body>
             
         <a href="formulaire.php">Retour au formulaire</a>
+        <?php
+
+          $pageTitle = "search | Legendary_lords_bonus";
+          session_start();
+
+          define('DB_HOST', "localhost");
+          define('DB_NAME', "root");
+          define('DB_PASSWORD', "root");
+          define('DB_DATABASE',"LegendaryLordsBonus");
+
+          $connect = new mysqli(DB_HOST, DB_NAME, DB_PASSWORD, DB_DATABASE);
+
+          $ll_selected = $_POST["legendary_lord_selection"];
+          $race_selected = $_POST["race"];
+
+              if (isset($ll_selected)){
+
+                  $req_bonuses="SELECT bonus1, bonus2, bonus3 from legendaryLords where legendary_lord = '$ll_selected'";
+                  $resultat_bonuses=$connect->query($req_bonuses);
+                  $connect->close();         
+                      while ($ll_bonus = mysqli_fetch_array($resultat_bonuses)){
+                        
+                          $bonus1=$ll_bonus[bonus1];
+                          $bonus2=$ll_bonus[bonus2];
+                          $bonus3=$ll_bonus[bonus3];
+          
+                  }
+                
+              }else
+                  echo '<p id="no-selection">'.'Pas de legendary lord selectionné !!!!'."\n".'<p>';  
+
+        ?>
 
         <h1>Legendary lord bonuses result</h1>
         
