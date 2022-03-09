@@ -43,6 +43,8 @@ $race_selected = $_POST["race"];
         <body>
             
         <a href="formulaire.php">Retour au formulaire</a>
+
+        <h1>Legendary lord bonuses result</h1>
         
         <table class="table">
           <thead>
@@ -68,9 +70,13 @@ $race_selected = $_POST["race"];
               <th scope="row">2</th>             
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
             </tr>
