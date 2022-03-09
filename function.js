@@ -15,7 +15,9 @@ function displayLegendaryLord(jsonFile){
     .then((data) => {
         console.log(race)
         var ll_Selection = document.getElementById("legendary_lord");
+        for (var i = 0; i<data.length+1; i++){ 
         ll_Selection.remove('option'); 
+        }
         for (var i = 0; i<data.length; i++){ 
             var opt = document.createElement('option');   
             if (data[i].race === race){                   
@@ -29,7 +31,7 @@ function displayLegendaryLord(jsonFile){
     
 //Function which get data from JSON file and dispay all legendary lords
 function jsonFetch (jsonFile){
-    
+
     fetch(jsonFile)
     .then(results => results.json())
     .then((dataMain) => {

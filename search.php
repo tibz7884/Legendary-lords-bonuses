@@ -1,4 +1,3 @@
-<a href="formulaire.php">Retour au formulaire</a>
 <?php
 
 $pageTitle = "search | Legendary_lords_bonus";
@@ -11,16 +10,8 @@ define('DB_DATABASE',"LegendaryLordsBonus");
 
 $connect = new mysqli(DB_HOST, DB_NAME, DB_PASSWORD, DB_DATABASE);
 
-
-//$req_race="SELECT race_ID FROM legendarylords INNER JOIN race on legendarylords.race_ID = race.id ";
-//$resultat_race=$connect->query($req_race);
-//$connect->close();
-
 $ll_selected = $_POST["legendary_lord_selection"];
 $race_selected = $_POST["race"];
-
-//var_dump($ll_selected);
-var_dump($race_selected);
 
     if (isset($ll_selected) && $ll_selected != " -- select a legendary lord -- "){
 
@@ -30,10 +21,62 @@ var_dump($race_selected);
         $resultat_bonuses=$connect->query($req_bonuses);
         $connect->close();         
             while ($ll_bonus = mysqli_fetch_array($resultat_bonuses)){
-                //var_dump($ll_bonus);
-                echo 'Bonus 1 = '.$ll_bonus[bonus1].' '.'Bonus 2 = '.$ll_bonus[bonus2].' '.'Bonus 3 ='.$ll_bonus[bonus3] ;
+               
+                $bonus1=$ll_bonus[bonus1];
+                $bonus2=$ll_bonus[bonus2];
+                $bonus3=$ll_bonus[bonus3];
+ 
         }
        
     }else
         echo 'pas de legendary lord entré!!!!'."\n";
 
+        ?>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            
+        <a href="formulaire.php">Retour au formulaire</a>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Legendary Lord Name</th>
+              <th scope="col">Bonus 1</th>
+              <th scope="col">Bonus 2</th>
+              <th scope="col">Bonus 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="col-1">
+              <th scope="row">1</th>
+              <?php 
+                echo '<td>'.$ll_selected.'</td>';    
+                echo '<td> '.$bonus1.' </td>';
+                echo '<td> '.$bonus2.' </td>';
+                echo '<td> '.$bonus3.' </td>';
+              ?>
+            </tr>
+            <tr>
+              <th scope="row">2</th>             
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        </body>
+        </html>
