@@ -2,4 +2,5 @@
 
 A simple software to check bonuses you can get when you kill a legendary lord in TOTALWAR WARHAMMER II
 
-The software works actually good there is only some design (CSS) to do for the search page.
+For the moment, you can only choose 1 legendary lord but the idea is to get more...
+I work on it ;)
